@@ -10,5 +10,5 @@ export const findLastUserId = async () => {
 }
 
 export const generateUserId =async () => {
-
+    const currentUserId = await (0).toString().padStart(5, '0')
 }
