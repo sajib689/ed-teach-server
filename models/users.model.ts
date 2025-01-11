@@ -4,7 +4,7 @@ import { IUser } from "../interfaces/users.interface";
 
 type userModel = Model<IUser, object>
 export const userSchema = new Schema <IUser>({
-    id: { type: Number, required: true },
+    id: { type: String, required: true },
     role: { type: String, required: true },
     name: { type: String, required: true },
     email: { type: String, required: true },
