@@ -14,6 +14,10 @@ export const userSchema = new Schema<IUser>({
   email: { type: String, required: true },
   password: { type: String, required: true },
   number: { type: Number, required: true },
+  create_At: { 
+    type: Date, 
+    default: Date.now // Automatically set the current timestamp
+  },
 });
 
 export const User = model<IUser, userModel>("User", userSchema);
