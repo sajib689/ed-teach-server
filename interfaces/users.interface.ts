@@ -6,4 +6,5 @@ export interface IUser {
     email: string;
     password: string;
     number: number;
+    create_At?: Date;
 }
