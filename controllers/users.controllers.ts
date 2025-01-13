@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import { createUsers } from "../services/users.services";
+import { User } from "../models/users.model";
 
 export const sendUsers = async (req: Request, res: Response) => {
   try {
     // Extract user data from the request body
     const user = req.body;
-
     // Validate required fields
     if (!user || !user.role || !user.name || !user.email || !user.password || !user.number) {
       return res.status(400).json({
