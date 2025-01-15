@@ -1,5 +1,5 @@
 export interface Course {
-    id: number; // Unique identifier for the course
+    id: number; // Unique ID of the course
     courseImage: string; // URL of the course image
     courseName: string; // Name of the course
     providerName: string; // Name of the course provider
