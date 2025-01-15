@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
 
-const courseModelSchema = new Schema({
+const courseSchema = new Schema({
     
 });

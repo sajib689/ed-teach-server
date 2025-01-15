@@ -1,4 +1,4 @@
-export interface Course {
+export interface ICourse {
     id: number; // Unique ID of the course
     courseImage: string; // URL of the course image
     courseName: string; // Name of the course
