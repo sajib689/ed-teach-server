@@ -5,3 +5,4 @@ import { courseController } from '../controllers/course.controller';
 const router = express.Router();
 
 router.post('/addcourse', asyncHandler(courseController))
+router.get('/getcourses', asyncHandler(courseController))
