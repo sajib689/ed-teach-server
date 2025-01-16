@@ -1,4 +1,5 @@
+import { Request, Response } from "express";
 
-const courseController = async () => {
+const courseController = async (res: Response, req: Request) => {
     
 }
