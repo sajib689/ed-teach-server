@@ -19,3 +19,13 @@ export const courseService = async (course: Partial<ICourse>): Promise<ICourse |
         throw new Error("Failed to create course.");
     }
 }
+
+const getCourseService = async (): Promise<ICourse[]> => {
+    try {
+        const courses = await Course.find();
+        return courses;
+    } catch (error) {
+        console.error("Error in getCourseService:", error);
+        throw new Error("Failed to get courses.");
+    }
+}
