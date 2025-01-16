@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from './routes/users.route';
+import courseRouter from './routes/course.route';
 
 // Configure environment variables
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(cors());
 
 // Register and login routes
 app.use('/api/v1/', router)
+app.use('/api/v1/', courseRouter)
 
 
 

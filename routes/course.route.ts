@@ -1,7 +1,10 @@
 
 import express from 'express';
 import { asyncHandler } from './../middlewares/asyncHandler';
-import { courseController } from '../controllers/course.controller';
-const router = express.Router();
+import { courseController, getCourseController } from '../controllers/course.controller';
+const courseRouter = express.Router();
 
-router.post('/addcourse', asyncHandler(courseController))
+courseRouter.post('/addcourse', asyncHandler(courseController))
+courseRouter.get('/getcourses', asyncHandler(getCourseController))
+
+export default courseRouter;
