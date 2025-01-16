@@ -1,3 +1,4 @@
+import {generateUserId} from '../utils/generateUserId '
 
 import { Course } from '../models/course.model';
 import { ICourse } from './../interfaces/course.interface';
@@ -7,6 +8,9 @@ export const courseService = async (course: Partial<ICourse>): Promise<ICourse |
         if (!course) {
             throw new Error("Course data is required.");
         }
+        // Generate a unique ID for the user
+        const id = await generateUserId();
+        course.id = id;
         // Save the course in the database
         const createCourse = await Course.create(course);
         return createCourse;
