@@ -3,7 +3,7 @@ import { ICourse } from "../interfaces/course.interface";
 
 type courseModel = Model<ICourse, object>;
 export const courseSchema = new Schema<ICourse>({
-  id: { type: Number, required: true },
+  id: { type: String, required: true },
   courseImage: { type: String, required: true },
   courseName: { type: String, required: true },
   providerName: { type: String, required: true },
