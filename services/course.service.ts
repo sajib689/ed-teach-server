@@ -2,6 +2,7 @@ import {generateUserId} from '../utils/generateUserId '
 
 import { Course } from '../models/course.model';
 import { ICourse } from './../interfaces/course.interface';
+import mongoose from 'mongoose';
 export const courseService = async (course: Partial<ICourse>): Promise<ICourse | null> => {
     try {
         // Validate input
@@ -32,10 +33,22 @@ export const getCourseService = async (): Promise<ICourse[]> => {
 
 export const getCourseByIdService = async (id: string) => {
     try {
-        const course = await Course.findById(id);
+        // Check if it's a valid ObjectId format
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            throw new Error("Invalid course ID format");
+        }
+        // If you are querying by MongoDB's ObjectId (default _id)
+        const course = await Course.findOne({ _id: new mongoose.Types.ObjectId(id) });
+        
+        // Or, if you're querying by a custom `id` field:
+        // const course = await Course.findOne({ id: id });
+
+        if (!course) {
+            throw new Error("Course not found.");
+        }
         return course;
     } catch (error) {
-        console.error("Error in getCourseService:", error);
-        throw new Error("Failed to get courses.");
+        console.error("Error in getCourseByIdService:", error);
+        throw new Error("Failed to get course.");
     }
 }
