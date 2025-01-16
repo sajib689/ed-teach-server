@@ -1,7 +1,7 @@
 
 import { Course } from '../models/course.model';
 import { ICourse } from './../interfaces/course.interface';
-const courseService = async (course: Partial<ICourse>): Promise<ICourse | null> => {
+export const courseService = async (course: Partial<ICourse>): Promise<ICourse | null> => {
     try {
         // Validate input
         if (!course) {
