@@ -29,3 +29,13 @@ export const getCourseService = async (): Promise<ICourse[]> => {
         throw new Error("Failed to get courses.");
     }
 }
+
+export const getCourseByIdService = async (id: string) => {
+    try {
+        const course = await Course.findById(id);
+        return course;
+    } catch (error) {
+        console.error("Error in getCourseService:", error);
+        throw new Error("Failed to get courses.");
+    }
+}
