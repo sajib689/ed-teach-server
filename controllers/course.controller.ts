@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { courseService, getCourseByIdService, getCourseService } from "../services/course.service";
-import { ICourse } from "../interfaces/course.interface";
 import mongoose from "mongoose";
 
 export const courseController = async (req: Request,res: Response) => {
