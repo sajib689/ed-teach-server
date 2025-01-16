@@ -33,15 +33,11 @@ export const getCourseService = async (): Promise<ICourse[]> => {
 
 export const getCourseByIdService = async (id: string) => {
     try {
-        // Check if it's a valid ObjectId format
         if (!mongoose.Types.ObjectId.isValid(id)) {
             throw new Error("Invalid course ID format");
         }
-        // If you are querying by MongoDB's ObjectId (default _id)
         const course = await Course.findOne({ _id: new mongoose.Types.ObjectId(id) });
-        
-        // Or, if you're querying by a custom `id` field:
-        // const course = await Course.findOne({ id: id });
+       
 
         if (!course) {
             throw new Error("Course not found.");
