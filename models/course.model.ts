@@ -2,8 +2,8 @@ import { model, Model, Schema } from "mongoose";
 import { ICourse } from "../interfaces/course.interface";
 
 type courseModel = Model<ICourse, object>;
-export const courseSchema = new Schema <ICourse>({
-    id: { type: Number, required: true },
+export const courseSchema = new Schema<ICourse>({
+  id: { type: Number, required: true },
   courseImage: { type: String, required: true },
   courseName: { type: String, required: true },
   providerName: { type: String, required: true },
