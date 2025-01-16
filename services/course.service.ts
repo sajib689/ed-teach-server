@@ -20,7 +20,7 @@ export const courseService = async (course: Partial<ICourse>): Promise<ICourse |
     }
 }
 
-const getCourseService = async (): Promise<ICourse[]> => {
+export const getCourseService = async (): Promise<ICourse[]> => {
     try {
         const courses = await Course.find();
         return courses;

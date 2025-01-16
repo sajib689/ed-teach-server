@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { courseService } from "../services/course.service";
+import { courseService, getCourseService } from "../services/course.service";
 
 export const courseController = async (res: Response, req: Request) => {
     try {
@@ -7,6 +7,18 @@ export const courseController = async (res: Response, req: Request) => {
         const result = await courseService(course);
         return res.status(200).json({
             message: "Course created successfully",
+            data: result
+        })
+    } catch (err) {
+        return res.status(500).json({err: err.message})
+    }
+}
+
+export const getCourseController = async (res: Response, req: Request) => {
+    try {
+        const result = await getCourseService();
+        return res.status(200).json({
+            message: "Courses fetched successfully",
             data: result
         })
     } catch (err) {
