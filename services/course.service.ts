@@ -36,7 +36,7 @@ export const getCourseByIdService = async (id: string) => {
         if (!mongoose.Types.ObjectId.isValid(id)) {
             throw new Error("Invalid course ID format");
         }
-        const course = await Course.findOne({ _id: new mongoose.Types.ObjectId(id) });
+        const course = await Course.findById({ _id: new mongoose.Types.ObjectId(id) });
        
 
         if (!course) {
