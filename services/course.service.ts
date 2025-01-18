@@ -36,15 +36,19 @@ export const getCourseByIdService = async (id: string) => {
         if (!mongoose.Types.ObjectId.isValid(id)) {
             throw new Error("Invalid course ID format");
         }
-        const course = await Course.findById({ _id: new mongoose.Types.ObjectId(id) });
-       
+
+        const course = await Course.findById(id).catch((err) => {
+            console.error("Database query failed:", err);
+            throw new Error("Failed to fetch course from the database.");
+        });
 
         if (!course) {
             throw new Error("Course not found.");
         }
+
         return course;
     } catch (error) {
         console.error("Error in getCourseByIdService:", error);
-        throw new Error("Failed to get course.");
+        throw error;
     }
-}
+};
