@@ -30,7 +30,6 @@ export const getCourseController = async ( req: Request,res: Response) => {
 export const getCourseByIdController = async (req: Request, res: Response): Promise<Response> => {
     try {
         const id = req.params.id;
-        console.log("Fetching course with id:", id); 
         // Ensure the id is a valid ObjectId
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(400).json({ message: "Invalid course ID format" });
