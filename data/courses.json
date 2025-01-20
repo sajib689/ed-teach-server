@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "courseImage": "https://miro.medium.com/v2/resize:fit:1358/1*W7RrtI7JITRMdo8f7iTioQ.jpeg",
+    "courseName": "Master React in 30 Days",
+    "providerName": "John Doe",
+    "providerImage": "https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg",
+    "providerTitle": "Senior Developer",
+    "price": "49.99",
+    "totalEnrolls": "1,245",
+    "courseCategory": "Frontend Development",
+    "courseType": "featured course",
+    "courseDuration": "30 hours",
+    "rating": 4.8,
+    "courseLevel": "Intermediate",
+    "whatYouWillLearn": "Understand React fundamentals, build dynamic web applications, master React hooks and state management, deploy React applications to the web.",
+    "statistics": {
+      "coursesCreated": 12,
+      "workshopsAttended": 5,
+      "personsMentored": 50,
+      "webinarHosted": 8
+    }
+  },
+  {
+    "id": 2,
+    "courseImage": "https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png",
+    "courseName": "Advanced Node.js Techniques",
+    "providerName": "Jane Smith",
+    "providerImage": "https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg",
+    "providerTitle": "Software Architect",
+    "price": "69.99",
+    "totalEnrolls": "980",
+    "courseCategory": "Backend Development",
+    "courseType": "all course",
+    "courseDuration": "25 hours",
+    "rating": 4.6,
+    "courseLevel": "Advanced",
+    "whatYouWillLearn": "Optimize Node.js performance, handle advanced server-side architecture, master asynchronous programming, implement scalable microservices.",
+    "statistics": {
+      "coursesCreated": 8,
+      "workshopsAttended": 3,
+      "personsMentored": 40,
+      "webinarHosted": 4
+    }
+  },
+  {
+    "id": 3,
+    "courseImage": "https://media.geeksforgeeks.org/wp-content/uploads/20230706133033/An-introduction-to-Machine-Learning-01.webp",
+    "courseName": "Intro to Machine Learning",
+    "providerName": "Mike Johnson",
+    "providerImage": "https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg",
+    "providerTitle": "Data Scientist",
+    "price": "89.99",
+    "totalEnrolls": "1,745",
+    "courseCategory": "Data Science",
+    "courseType": "all course",
+    "courseDuration": "40 hours",
+    "rating": 4.7,
+    "courseLevel": "Beginner",
+    "whatYouWillLearn": "Understand machine learning concepts, explore supervised and unsupervised learning, build predictive models, work with real-world datasets.",
+    "statistics": {
+      "coursesCreated": 10,
+      "workshopsAttended": 7,
+      "personsMentored": 60,
+      "webinarHosted": 6
+    }
+  },
+  {
+    "id": 4,
+    "courseImage": "https://s3.ap-southeast-1.amazonaws.com/uplyrn.com/uploads%2F0000%2F50%2F2022%2F10%2F11%2Fthe-ultimate-2022-full-stack-web-development-bootcamp-uplyrn.webp",
+    "courseName": "Full-Stack Web Development Bootcamp",
+    "providerName": "Emily Davis",
+    "providerImage": "https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg",
+    "providerTitle": "Full-Stack Engineer",
+    "price": "99.99",
+    "totalEnrolls": "2,300",
+    "courseCategory": "Full-Stack Development",
+    "courseType": "featured course",
+    "courseDuration": "50 hours",
+    "rating": 4.9,
+    "courseLevel": "Beginner to Advanced",
+    "whatYouWillLearn": "Master both frontend and backend development, learn about databases and APIs, build and deploy full-stack applications, collaborate in a team environment.",
+    "statistics": {
+      "coursesCreated": 15,
+      "workshopsAttended": 6,
+      "personsMentored": 80,
+      "webinarHosted": 9
+    }
+  },
+  {
+    "id": 5,
+    "courseImage": "https://www.split.io/wp-content/uploads/Blog-2160x1080_GitandGitHubatWork-1-1920x960.jpg",
+    "courseName": "Master on Git and GitHub",
+    "providerName": "Sajib Hasan",
+    "providerImage": "https://randomuser.me/api/portraits/men/1.jpg",
+    "providerTitle": "Software Engineering Manager",
+    "price": "500",
+    "totalEnrolls": "41",
+    "courseCategory": "Version Control",
+    "courseType": "all course",
+    "courseDuration": "10 hours",
+    "rating": 4.3,
+    "courseLevel": "Beginner",
+    "whatYouWillLearn": "Understand Git fundamentals, master GitHub repositories, collaborate on projects using version control, resolve merge conflicts efficiently.",
+    "statistics": {
+      "coursesCreated": 5,
+      "workshopsAttended": 2,
+      "personsMentored": 25,
+      "webinarHosted": 3
+    }
+  },
+  {
+    "id": 6,
+    "courseImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzle1fDjtlTu2cpeOCzGeJOyq5XCubwJo9Q&s",
+    "courseName": "Master on Python Programming",
+    "providerName": "Rokon Hasan",
+    "providerImage": "https://randomuser.me/api/portraits/men/2.jpg",
+    "providerTitle": "Software Engineering Manager",
+    "price": "500",
+    "totalEnrolls": "888",
+    "courseCategory": "Programming",
+    "courseType": "all course",
+    "courseDuration": "20 hours",
+    "rating": 4.4,
+    "courseLevel": "Intermediate",
+    "whatYouWillLearn": "Understand Python programming, solve complex problems with Python, master data analysis and visualization, build robust applications.",
+    "statistics": {
+      "coursesCreated": 6,
+      "workshopsAttended": 3,
+      "personsMentored": 30,
+      "webinarHosted": 4
+    }
+  },
+  {
+    "id": 7,
+    "courseImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHX2CLEmQaEY7AT4tmzaxQc8QiyY_euS10_A&s",
+    "courseName": "Software Engineering Techniques",
+    "providerName": "Sumon Hasan",
+    "providerImage": "https://randomuser.me/api/portraits/men/3.jpg",
+    "providerTitle": "Software Engineering Manager",
+    "price": "500",
+    "totalEnrolls": "300",
+    "courseCategory": "Software Engineering",
+    "courseType": "featured course",
+    "courseDuration": "15 hours",
+    "rating": 4.5,
+    "courseLevel": "Advanced",
+    "whatYouWillLearn": "Learn essential software engineering techniques, design robust software systems, understand agile methodologies, implement efficient testing strategies.",
+    "statistics": {
+      "coursesCreated": 7,
+      "workshopsAttended": 4,
+      "personsMentored": 35,
+      "webinarHosted": 5
+    }
+  },
+  {
+    "id": 8,
+    "courseImage": "https://miro.medium.com/v2/resize:fit:1400/1*YclJ1hp8CgncNJiFmZCCmg.jpeg",
+    "courseName": "Advanced JavaScript Techniques",
+    "providerName": "Sarah Williams",
+    "providerImage": "https://randomuser.me/api/portraits/women/1.jpg",
+    "providerTitle": "Frontend Developer",
+    "price": "299",
+    "totalEnrolls": "1,200",
+    "courseCategory": "JavaScript",
+    "courseType": "all course",
+    "courseDuration": "35 hours",
+    "rating": 4.8,
+    "courseLevel": "Advanced",
+    "whatYouWillLearn": "Master advanced JavaScript concepts, optimize code for performance, build scalable JavaScript applications, understand modern ES6+ features.",
+    "statistics": {
+      "coursesCreated": 8,
+      "workshopsAttended": 5,
+      "personsMentored": 45,
+      "webinarHosted": 6
+    }
+  }
+]
