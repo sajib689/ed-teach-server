@@ -21,3 +21,18 @@ export const createUsers = async (user: Partial<IUser>): Promise<IUser | null> =
     throw new Error("Failed to create user.");
   }
 };
+
+export const getUsersByEmailService = async (email: string): Promise<IUser | null> => {
+  try {
+    // Validate input
+    if (!email) {
+      throw new Error("Email is required.");
+    }
+
+    // Find the user by email
+    const user = await User.findOne({ email: email });
+    return user;
+  } catch (err) {
+    console.error("Error in getUsersByEmailService:", err);
+    throw new Error("Failed to get user by email.");
+  }}
