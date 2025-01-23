@@ -95,8 +95,6 @@ app.post('/init', async (req: Request, res: Response): Promise<void> => {
   const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
 
   try {
-    console.log('Initializing payment with data:', payload);
-
     const apiResponse = await sslcz.init(payload);
 
     const { GatewayPageURL } = apiResponse;
