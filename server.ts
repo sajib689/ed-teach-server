@@ -6,6 +6,10 @@ import router from './routes/users.route';
 import courseRouter from './routes/course.route';
 import {createServer } from "http";
 import {Server} from "socket.io";
+import SSLCommerzPayment from 'sslcommerz-lts';
+const store_id = process.env.STORE_ID
+const store_passwd = process.env.STORE_PASSWORD
+const is_live = false
 // Configure environment variables
 dotenv.config();
 
