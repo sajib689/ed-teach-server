@@ -36,12 +36,30 @@ const connectDB = async () => {
 };
 
 // Socket.io connection
+let activeUsers = 0;
 const server = createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+  }
+})
+io.on('connection', (socket) => {
+  activeUsers++;
+  io.emit('activeUsers', activeUsers);
+  console.log(`A user connected: ${socket.id}. Active users: ${activeUsers}`);
+  socket.on('disconnect', () => {
+    activeUsers--;
+    console.log(`A user disconnected: ${socket.id}. Active users: ${activeUsers}`);
 
-// Start the server
+    // Update all clients with the new active user count
+    io.emit("activeUsers", activeUsers);
+  })
+})
+// Start the server with the specified port
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, async () => {
+server.listen(PORT, async () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   await connectDB();
 });
