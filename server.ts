@@ -4,7 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import router from './routes/users.route';
 import courseRouter from './routes/course.route';
-
+import {createServer } from "http";
+import {Server} from "socket.io";
 // Configure environment variables
 dotenv.config();
 
@@ -33,6 +34,9 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
+
+// Socket.io connection
+const server = createServer(app);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
