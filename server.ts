@@ -47,12 +47,9 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
   activeUsers++;
   io.emit('activeUsers', activeUsers);
-  console.log(`A user connected: ${socket.id}. Active users: ${activeUsers}`);
   socket.on('disconnect', () => {
     activeUsers--;
-    console.log(`A user disconnected: ${socket.id}. Active users: ${activeUsers}`);
-
-    // Update all clients with the new active user count
+   // Update all clients with the new active user count
     io.emit("activeUsers", activeUsers);
   })
 })
