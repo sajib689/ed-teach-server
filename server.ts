@@ -36,6 +36,7 @@ const connectDB = async () => {
 };
 
 // Socket.io connection
+let activeUsers = 0;
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
