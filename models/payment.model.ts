@@ -2,7 +2,8 @@ import { model, Model, Schema } from "mongoose";
 import { IPayment } from "../interfaces/paymentSuccess.interface";
 
 type paymentModel = Model<IPayment, object>;
-export const paymentSchema = new Schema<IPayment>({
+export const paymentSchema = new Schema<IPayment>(
+  {
     tran_id: { type: String, required: true, unique: true },
     amount: { type: Number, required: true },
     status: { type: String, required: true },
@@ -16,6 +17,7 @@ export const paymentSchema = new Schema<IPayment>({
     },
     courseName: { type: String, required: true },
   },
-  { timestamps: true })
+  { timestamps: true }
+);
 
-  export const Payment = model<IPayment, paymentModel>("Payment", paymentSchema);
+export const Payment = model<IPayment, paymentModel>("Payment", paymentSchema);
