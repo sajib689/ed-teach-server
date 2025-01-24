@@ -59,8 +59,6 @@ export const initPayment = async (req: Request, res: Response): Promise<void> =>
 
 
   export const paymentSuccessController = async (req: Request, res: Response) => {
-    console.log('Request body:', req.body);  // Check the incoming request
-  
     const { 
       courseName, 
       cus_name, 
