@@ -27,6 +27,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/v1/', router);
@@ -67,14 +68,15 @@ io.on('connection', (socket) => {
 
 // Payment gateway initialization
 app.post('/init', async (req: Request, res: Response): Promise<void> => {
+  const transactionId = `tran_${Date.now()}`;
   const payload: PaymentData = {
     total_amount: req.body.amount,
     currency: "BDT",
-    tran_id: `tran_${Date.now()}`,
-    success_url: process.env.SUCCESS_URL || "http://localhost:5000/success",
+    tran_id: transactionId,
+    success_url: process.env.SUCCESS_URL || `http://localhost:5000/payment/success/${transactionId}`,
     fail_url: process.env.FAIL_URL || "http://localhost:5000/fail",
     cancel_url: process.env.CANCEL_URL || "http://localhost:5000/cancel",
-    ipn_url: process.env.IPN_URL || "http://localhost:5000/ipn",
+    ipn_url: process.env.IPN_URL || "http://localhost:5000/payment/ipn",
     product_name: req.body.courseName,
     product_category: "Education",
     product_profile: "general",
@@ -107,8 +109,26 @@ app.post('/init', async (req: Request, res: Response): Promise<void> => {
     console.error('Payment initialization error:', error);
     res.status(500).json({ message: 'Payment initialization failed', error });
   }
+
+  
+});
+// Define this outside the `/init` route
+app.post('/payment/success/:tran_id', async (req: Request, res: Response) => {
+  const { tran_id } = req.params;
+  const { status } = req.body;
+
+  if (status === 'VALID') {
+    res.status(200).json({ message: 'Payment successful', tran_id });
+  } else {
+    res.status(400).json({ message: 'Payment failed', tran_id });
+  }
 });
 
+app.post('/payment/ipn', async (req: Request, res: Response) => {
+  console.log('IPN Request:', req.body);
+  // Validate and process the transaction based on the request body
+  res.status(200).send('IPN received');
+});
 
 // Start the server with the specified port
 const PORT = process.env.PORT || 5000;
