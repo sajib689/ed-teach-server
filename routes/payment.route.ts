@@ -1,7 +1,9 @@
 import express from 'express';
 import { asyncHandler } from './../middlewares/asyncHandler';
-import { paymentController } from '../controllers/payment.controller';
+import { initPayment, paymentSuccessController } from '../controllers/payment.controller';
 
-const route = express.Router();
+const paymentRouter = express.Router();
 
-route.post('/payment/success/:tran_id', asyncHandler(paymentController))
+paymentRouter.post('/payment/success/:tran_id', asyncHandler(paymentSuccessController));
+paymentRouter.post('/init', initPayment);
+export default paymentRouter;

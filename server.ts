@@ -8,6 +8,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import SSLCommerzPayment from 'sslcommerz-lts';
 import { PaymentData } from './interfaces/payment.interface';
+import paymentRouter from './routes/payment.route';
 
 // Load environment variables
 dotenv.config();
@@ -29,10 +30,11 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
+
 // Routes
 app.use('/api/v1/', router);
 app.use('/api/v1/', courseRouter);
-
+app.use('/api/v1/', paymentRouter);
 // MongoDB connection
 const connectDB = async () => {
   try {
@@ -67,62 +69,62 @@ io.on('connection', (socket) => {
 
 
 // Payment gateway initialization
-app.post('/init', async (req: Request, res: Response): Promise<void> => {
-  const transactionId = `tran_${Date.now()}`;
-  const payload: PaymentData = {
-    total_amount: req.body.amount,
-    currency: "BDT",
-    tran_id: transactionId,
-    success_url: process.env.SUCCESS_URL || `http://localhost:5000/payment/success/${transactionId}`,
-    fail_url: process.env.FAIL_URL || "http://localhost:5000/fail",
-    cancel_url: process.env.CANCEL_URL || "http://localhost:5000/cancel",
-    ipn_url: process.env.IPN_URL || "http://localhost:5000/payment/ipn",
-    product_name: req.body.courseName,
-    product_category: "Education",
-    product_profile: "general",
-    cus_name: req.body.name,
-    cus_email: req.body.email,
-    cus_phone: req.body.phone,
-    cus_add1: req.body.address || "Default Address",
-    cus_city: req.body.city || "Default City",
-    cus_country: req.body.country || "Bangladesh",
-    shipping_method: "NO", // Optional field
-  };
+// app.post('/init', async (req: Request, res: Response): Promise<void> => {
+//   const transactionId = `tran_${Date.now()}`;
+//   const payload: PaymentData = {
+//     total_amount: req.body.amount,
+//     currency: "BDT",
+//     tran_id: transactionId,
+//     success_url: `http://localhost:5000/api/v1/payment/success/${transactionId}`,
+//     fail_url: process.env.FAIL_URL || "http://localhost:5000/fail",
+//     cancel_url: process.env.CANCEL_URL || "http://localhost:5000/cancel",
+//     ipn_url: process.env.IPN_URL || "http://localhost:5000/payment/ipn",
+//     product_name: req.body.courseName,
+//     product_category: "Education",
+//     product_profile: "general",
+//     cus_name: req.body.name,
+//     cus_email: req.body.email,
+//     cus_phone: req.body.phone,
+//     cus_add1: req.body.address || "Default Address",
+//     cus_city: req.body.city || "Default City",
+//     cus_country: req.body.country || "Bangladesh",
+//     shipping_method: "NO", // Optional field
+//   };
   
   
   
   
   
 
-  const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
+//   const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live);
 
-  try {
-    const apiResponse = await sslcz.init(payload);
+//   try {
+//     const apiResponse = await sslcz.init(payload);
 
-    const { GatewayPageURL } = apiResponse;
-    if (GatewayPageURL) {
-      res.status(200).json({ url: GatewayPageURL });
-    } else {
-      res.status(400).json({ message: 'Failed to create payment session', apiResponse });
-    }
-  } catch (error) {
-    console.error('Payment initialization error:', error);
-    res.status(500).json({ message: 'Payment initialization failed', error });
-  }
-
-  
-});
-// Define this outside the `/init` route
-// app.post('/payment/success/:tran_id', async (req: Request, res: Response) => {
-//   const { tran_id } = req.params;
-//   const { status } = req.body;
-
-//   if (status === 'VALID') {
-//     res.status(200).json({ message: 'Payment successful', tran_id });
-//   } else {
-//     res.status(400).json({ message: 'Payment failed', tran_id });
+//     const { GatewayPageURL } = apiResponse;
+//     if (GatewayPageURL) {
+//       res.status(200).json({ url: GatewayPageURL });
+//     } else {
+//       res.status(400).json({ message: 'Failed to create payment session', apiResponse });
+//     }
+//   } catch (error) {
+//     console.error('Payment initialization error:', error);
+//     res.status(500).json({ message: 'Payment initialization failed', error });
 //   }
+
+  
 // });
+// // Define this outside the `/init` route
+app.post('/api/v1/payment/success/:tran_id', async (req: Request, res: Response) => {
+  const { tran_id } = req.params;
+  const { status } = req.body;
+  console.log(req.body);
+  if (status === 'VALID') {
+    res.status(200).json({ message: 'Payment successful', tran_id });
+  } else {
+    res.status(400).json({ message: 'Payment failed', tran_id });
+  }
+});
 
 // app.post('/payment/ipn', async (req: Request, res: Response) => {
 //   console.log('IPN Request:', req.body);
