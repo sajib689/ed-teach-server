@@ -113,22 +113,22 @@ app.post('/init', async (req: Request, res: Response): Promise<void> => {
   
 });
 // Define this outside the `/init` route
-app.post('/payment/success/:tran_id', async (req: Request, res: Response) => {
-  const { tran_id } = req.params;
-  const { status } = req.body;
+// app.post('/payment/success/:tran_id', async (req: Request, res: Response) => {
+//   const { tran_id } = req.params;
+//   const { status } = req.body;
 
-  if (status === 'VALID') {
-    res.status(200).json({ message: 'Payment successful', tran_id });
-  } else {
-    res.status(400).json({ message: 'Payment failed', tran_id });
-  }
-});
+//   if (status === 'VALID') {
+//     res.status(200).json({ message: 'Payment successful', tran_id });
+//   } else {
+//     res.status(400).json({ message: 'Payment failed', tran_id });
+//   }
+// });
 
-app.post('/payment/ipn', async (req: Request, res: Response) => {
-  console.log('IPN Request:', req.body);
-  // Validate and process the transaction based on the request body
-  res.status(200).send('IPN received');
-});
+// app.post('/payment/ipn', async (req: Request, res: Response) => {
+//   console.log('IPN Request:', req.body);
+//   // Validate and process the transaction based on the request body
+//   res.status(200).send('IPN received');
+// });
 
 // Start the server with the specified port
 const PORT = process.env.PORT || 5000;
