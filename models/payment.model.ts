@@ -15,7 +15,7 @@ export const paymentSchema = new Schema<IPayment>(
     total_amount: { type: Number, required: true },
     status: { type: String, default: "PENDING" }, // Default to PENDING
   },
-  { timestamps: true } // Automatically manage createdAt and updatedAt
+  { timestamps: true }
 );
 
 export const Payment = model<IPayment, PaymentModel>("Payment", paymentSchema);

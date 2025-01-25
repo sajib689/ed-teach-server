@@ -62,7 +62,6 @@ export const paymentSuccessController = async (req: Request, res: Response) => {
   
     try {
       const payment = await Payment.findOne({ tran_id });
-  
       if (!payment) {
         return res.status(404).json({ message: "Transaction not found" });
       }
