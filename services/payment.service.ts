@@ -57,10 +57,10 @@ export const updatePaymentStatus = async (
   }
 };
 
-export const paymentHistoryService = async () => {
+export const paymentHistoryService = async ({email}: {email: string})=> {
   try {
-    const payment = await Payment.find();
-    return payment;
+    const payments = await Payment.find({email}).lean()
+    return payments;
   } catch (error) {
     throw new Error('Payment initialization failed');
   }
