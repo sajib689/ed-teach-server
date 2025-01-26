@@ -56,3 +56,12 @@ export const updatePaymentStatus = async (
     throw new Error("An unknown error occurred while updating payment status.");
   }
 };
+
+export const paymentHistoryService = async ({email}: {email: string})=> {
+  try {
+    const payments = await Payment.find({email}).lean()
+    return payments;
+  } catch (error) {
+    throw new Error('Payment initialization failed');
+  }
+}

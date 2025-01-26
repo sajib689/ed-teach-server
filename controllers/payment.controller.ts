@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createPaymentSession, updatePaymentStatus } from '../services/payment.service';
+import { createPaymentSession, paymentHistoryService, updatePaymentStatus } from '../services/payment.service';
 import { PaymentData } from "../interfaces/payment.interface";
 import { Payment } from "../models/payment.model";
 
@@ -87,3 +87,14 @@ export const paymentSuccessController = async (req: Request, res: Response) => {
     }
   };
   
+
+  export const paymentHistoryController = async (req: Request, res: Response) => {
+    try {
+      const { email } = req.body;
+      const payment = await paymentHistoryService({ email });
+      res.status(200).json({ payment });
+    } catch (error) {
+      console.error("Error fetching payment history:", error);
+      res.status(500).json({ message: "Error fetching payment history", error });
+    }
+  }
