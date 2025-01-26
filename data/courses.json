@@ -14,12 +14,18 @@
     "rating": 4.8,
     "courseLevel": "Intermediate",
     "whatYouWillLearn": "Understand React fundamentals, build dynamic web applications, master React hooks and state management, deploy React applications to the web.",
-    "statistics": {
-      "coursesCreated": 12,
-      "workshopsAttended": 5,
-      "personsMentored": 50,
-      "webinarHosted": 8
-    }
+    "courseVideos": [
+      "https://example.com/videos/react/1.mp4",
+      "https://example.com/videos/react/2.mp4",
+      "https://example.com/videos/react/3.mp4",
+      "https://example.com/videos/react/4.mp4",
+      "https://example.com/videos/react/5.mp4",
+      "https://example.com/videos/react/6.mp4",
+      "https://example.com/videos/react/7.mp4",
+      "https://example.com/videos/react/8.mp4",
+      "https://example.com/videos/react/9.mp4",
+      "https://example.com/videos/react/10.mp4"
+    ]
   },
   {
     "id": 2,
@@ -36,12 +42,18 @@
     "rating": 4.6,
     "courseLevel": "Advanced",
     "whatYouWillLearn": "Optimize Node.js performance, handle advanced server-side architecture, master asynchronous programming, implement scalable microservices.",
-    "statistics": {
-      "coursesCreated": 8,
-      "workshopsAttended": 3,
-      "personsMentored": 40,
-      "webinarHosted": 4
-    }
+    "courseVideos": [
+      "https://example.com/videos/nodejs/1.mp4",
+      "https://example.com/videos/nodejs/2.mp4",
+      "https://example.com/videos/nodejs/3.mp4",
+      "https://example.com/videos/nodejs/4.mp4",
+      "https://example.com/videos/nodejs/5.mp4",
+      "https://example.com/videos/nodejs/6.mp4",
+      "https://example.com/videos/nodejs/7.mp4",
+      "https://example.com/videos/nodejs/8.mp4",
+      "https://example.com/videos/nodejs/9.mp4",
+      "https://example.com/videos/nodejs/10.mp4"
+    ]
   },
   {
     "id": 3,
@@ -58,12 +70,18 @@
     "rating": 4.7,
     "courseLevel": "Beginner",
     "whatYouWillLearn": "Understand machine learning concepts, explore supervised and unsupervised learning, build predictive models, work with real-world datasets.",
-    "statistics": {
-      "coursesCreated": 10,
-      "workshopsAttended": 7,
-      "personsMentored": 60,
-      "webinarHosted": 6
-    }
+    "courseVideos": [
+      "https://example.com/videos/ml/1.mp4",
+      "https://example.com/videos/ml/2.mp4",
+      "https://example.com/videos/ml/3.mp4",
+      "https://example.com/videos/ml/4.mp4",
+      "https://example.com/videos/ml/5.mp4",
+      "https://example.com/videos/ml/6.mp4",
+      "https://example.com/videos/ml/7.mp4",
+      "https://example.com/videos/ml/8.mp4",
+      "https://example.com/videos/ml/9.mp4",
+      "https://example.com/videos/ml/10.mp4"
+    ]
   },
   {
     "id": 4,
@@ -80,99 +98,147 @@
     "rating": 4.9,
     "courseLevel": "Beginner to Advanced",
     "whatYouWillLearn": "Master both frontend and backend development, learn about databases and APIs, build and deploy full-stack applications, collaborate in a team environment.",
-    "statistics": {
-      "coursesCreated": 15,
-      "workshopsAttended": 6,
-      "personsMentored": 80,
-      "webinarHosted": 9
-    }
+    "courseVideos": [
+      "https://example.com/videos/fullstack/1.mp4",
+      "https://example.com/videos/fullstack/2.mp4",
+      "https://example.com/videos/fullstack/3.mp4",
+      "https://example.com/videos/fullstack/4.mp4",
+      "https://example.com/videos/fullstack/5.mp4",
+      "https://example.com/videos/fullstack/6.mp4",
+      "https://example.com/videos/fullstack/7.mp4",
+      "https://example.com/videos/fullstack/8.mp4",
+      "https://example.com/videos/fullstack/9.mp4",
+      "https://example.com/videos/fullstack/10.mp4"
+    ]
   },
   {
     "id": 5,
-    "courseImage": "https://www.split.io/wp-content/uploads/Blog-2160x1080_GitandGitHubatWork-1-1920x960.jpg",
-    "courseName": "Master on Git and GitHub",
-    "providerName": "Sajib Hasan",
-    "providerImage": "https://randomuser.me/api/portraits/men/1.jpg",
-    "providerTitle": "Software Engineering Manager",
-    "price": "500",
-    "totalEnrolls": "41",
-    "courseCategory": "Version Control",
+    "courseImage": "https://static.vecteezy.com/system/resources/thumbnails/000/620/225/small/Coding_and_programming_mobile_app_design.jpg",
+    "courseName": "Mobile App Development with Flutter",
+    "providerName": "Chris Adams",
+    "providerImage": "https://img-c.udemycdn.com/course/750x422/1565838_e54e_18.jpg",
+    "providerTitle": "Mobile Developer",
+    "price": "79.99",
+    "totalEnrolls": "1,150",
+    "courseCategory": "Mobile Development",
     "courseType": "all course",
-    "courseDuration": "10 hours",
-    "rating": 4.3,
-    "courseLevel": "Beginner",
-    "whatYouWillLearn": "Understand Git fundamentals, master GitHub repositories, collaborate on projects using version control, resolve merge conflicts efficiently.",
-    "statistics": {
-      "coursesCreated": 5,
-      "workshopsAttended": 2,
-      "personsMentored": 25,
-      "webinarHosted": 3
-    }
+    "courseDuration": "35 hours",
+    "rating": 4.5,
+    "courseLevel": "Intermediate",
+    "whatYouWillLearn": "Build mobile apps for Android and iOS, learn Dart programming, integrate APIs, and create responsive UI/UX designs.",
+    "courseVideos": [
+      "https://example.com/videos/flutter/1.mp4",
+      "https://example.com/videos/flutter/2.mp4",
+      "https://example.com/videos/flutter/3.mp4",
+      "https://example.com/videos/flutter/4.mp4",
+      "https://example.com/videos/flutter/5.mp4",
+      "https://example.com/videos/flutter/6.mp4",
+      "https://example.com/videos/flutter/7.mp4",
+      "https://example.com/videos/flutter/8.mp4",
+      "https://example.com/videos/flutter/9.mp4",
+      "https://example.com/videos/flutter/10.mp4"
+    ]
   },
   {
     "id": 6,
-    "courseImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUzle1fDjtlTu2cpeOCzGeJOyq5XCubwJo9Q&s",
-    "courseName": "Master on Python Programming",
-    "providerName": "Rokon Hasan",
-    "providerImage": "https://randomuser.me/api/portraits/men/2.jpg",
-    "providerTitle": "Software Engineering Manager",
-    "price": "500",
-    "totalEnrolls": "888",
-    "courseCategory": "Programming",
+    "courseImage": "https://cdn.educba.com/academy/wp-content/uploads/2019/11/Introduction-to-Database.jpg",
+    "courseName": "Database Design and Management",
+    "providerName": "Oliver Brown",
+    "providerImage": "https://randomuser.me/api/portraits/men/4.jpg",
+    "providerTitle": "Database Administrator",
+    "price": "79.99",
+    "totalEnrolls": "1,100",
+    "courseCategory": "Database Management",
     "courseType": "all course",
     "courseDuration": "20 hours",
-    "rating": 4.4,
+    "rating": 4.7,
     "courseLevel": "Intermediate",
-    "whatYouWillLearn": "Understand Python programming, solve complex problems with Python, master data analysis and visualization, build robust applications.",
+    "whatYouWillLearn": "Understand relational databases, design efficient schemas, manage database systems, and optimize SQL queries.",
     "statistics": {
-      "coursesCreated": 6,
-      "workshopsAttended": 3,
-      "personsMentored": 30,
-      "webinarHosted": 4
-    }
+      "coursesCreated": 9,
+      "workshopsAttended": 6,
+      "personsMentored": 45,
+      "webinarHosted": 7
+    },
+    "videoLinks": [
+      "https://example.com/video1",
+      "https://example.com/video2",
+      "https://example.com/video3",
+      "https://example.com/video4",
+      "https://example.com/video5",
+      "https://example.com/video6",
+      "https://example.com/video7",
+      "https://example.com/video8",
+      "https://example.com/video9",
+      "https://example.com/video10"
+    ]
   },
   {
     "id": 7,
-    "courseImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHX2CLEmQaEY7AT4tmzaxQc8QiyY_euS10_A&s",
-    "courseName": "Software Engineering Techniques",
-    "providerName": "Sumon Hasan",
-    "providerImage": "https://randomuser.me/api/portraits/men/3.jpg",
-    "providerTitle": "Software Engineering Manager",
-    "price": "500",
-    "totalEnrolls": "300",
-    "courseCategory": "Software Engineering",
+    "courseImage": "https://www.learnopencv.com/wp-content/uploads/2020/03/Deep-Learning-1.jpg",
+    "courseName": "Deep Learning Fundamentals",
+    "providerName": "Sophia White",
+    "providerImage": "https://randomuser.me/api/portraits/women/2.jpg",
+    "providerTitle": "AI Specialist",
+    "price": "119.99",
+    "totalEnrolls": "950",
+    "courseCategory": "Artificial Intelligence",
     "courseType": "featured course",
-    "courseDuration": "15 hours",
-    "rating": 4.5,
+    "courseDuration": "30 hours",
+    "rating": 4.8,
     "courseLevel": "Advanced",
-    "whatYouWillLearn": "Learn essential software engineering techniques, design robust software systems, understand agile methodologies, implement efficient testing strategies.",
+    "whatYouWillLearn": "Understand neural networks, implement deep learning models, and work on AI-driven applications.",
     "statistics": {
-      "coursesCreated": 7,
-      "workshopsAttended": 4,
-      "personsMentored": 35,
-      "webinarHosted": 5
-    }
+      "coursesCreated": 11,
+      "workshopsAttended": 8,
+      "personsMentored": 60,
+      "webinarHosted": 9
+    },
+    "videoLinks": [
+      "https://example.com/video1",
+      "https://example.com/video2",
+      "https://example.com/video3",
+      "https://example.com/video4",
+      "https://example.com/video5",
+      "https://example.com/video6",
+      "https://example.com/video7",
+      "https://example.com/video8",
+      "https://example.com/video9",
+      "https://example.com/video10"
+    ]
   },
   {
     "id": 8,
-    "courseImage": "https://miro.medium.com/v2/resize:fit:1400/1*YclJ1hp8CgncNJiFmZCCmg.jpeg",
-    "courseName": "Advanced JavaScript Techniques",
-    "providerName": "Sarah Williams",
-    "providerImage": "https://randomuser.me/api/portraits/women/1.jpg",
-    "providerTitle": "Frontend Developer",
-    "price": "299",
-    "totalEnrolls": "1,200",
-    "courseCategory": "JavaScript",
+    "courseImage": "https://miro.medium.com/v2/resize:fit:1400/1*8-Jgc62EFcKm8yxmI5RScw.jpeg",
+    "courseName": "Introduction to Cloud Computing",
+    "providerName": "Liam Johnson",
+    "providerImage": "https://randomuser.me/api/portraits/men/5.jpg",
+    "providerTitle": "Cloud Solutions Architect",
+    "price": "89.99",
+    "totalEnrolls": "1,400",
+    "courseCategory": "Cloud Computing",
     "courseType": "all course",
-    "courseDuration": "35 hours",
-    "rating": 4.8,
-    "courseLevel": "Advanced",
-    "whatYouWillLearn": "Master advanced JavaScript concepts, optimize code for performance, build scalable JavaScript applications, understand modern ES6+ features.",
+    "courseDuration": "25 hours",
+    "rating": 4.6,
+    "courseLevel": "Beginner to Intermediate",
+    "whatYouWillLearn": "Learn cloud fundamentals, explore services like AWS and Azure, and deploy cloud applications.",
     "statistics": {
-      "coursesCreated": 8,
-      "workshopsAttended": 5,
-      "personsMentored": 45,
-      "webinarHosted": 6
-    }
+      "coursesCreated": 10,
+      "workshopsAttended": 7,
+      "personsMentored": 50,
+      "webinarHosted": 8
+    },
+    "videoLinks": [
+      "https://example.com/video1",
+      "https://example.com/video2",
+      "https://example.com/video3",
+      "https://example.com/video4",
+      "https://example.com/video5",
+      "https://example.com/video6",
+      "https://example.com/video7",
+      "https://example.com/video8",
+      "https://example.com/video9",
+      "https://example.com/video10"
+    ]
   }
 ]
