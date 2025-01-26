@@ -6,5 +6,5 @@ const paymentRouter = express.Router();
 
 paymentRouter.post('/payment/success/:tran_id', asyncHandler(paymentSuccessController));
 paymentRouter.post('/init', initPayment);
-paymentRouter.get('paymenthistory', asyncHandler(paymentHistoryController));
+paymentRouter.get('/paymenthistory/:email', asyncHandler(paymentHistoryController));
 export default paymentRouter;
