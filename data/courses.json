@@ -14,17 +14,47 @@
     "rating": 4.8,
     "courseLevel": "Intermediate",
     "whatYouWillLearn": "Understand React fundamentals, build dynamic web applications, master React hooks and state management, deploy React applications to the web.",
-    "courseVideos": [
-      "https://example.com/videos/react/1.mp4",
-      "https://example.com/videos/react/2.mp4",
-      "https://example.com/videos/react/3.mp4",
-      "https://example.com/videos/react/4.mp4",
-      "https://example.com/videos/react/5.mp4",
-      "https://example.com/videos/react/6.mp4",
-      "https://example.com/videos/react/7.mp4",
-      "https://example.com/videos/react/8.mp4",
-      "https://example.com/videos/react/9.mp4",
-      "https://example.com/videos/react/10.mp4"
+    "videoLinks": [
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -42,18 +72,49 @@
     "rating": 4.6,
     "courseLevel": "Advanced",
     "whatYouWillLearn": "Optimize Node.js performance, handle advanced server-side architecture, master asynchronous programming, implement scalable microservices.",
-    "courseVideos": [
-      "https://example.com/videos/nodejs/1.mp4",
-      "https://example.com/videos/nodejs/2.mp4",
-      "https://example.com/videos/nodejs/3.mp4",
-      "https://example.com/videos/nodejs/4.mp4",
-      "https://example.com/videos/nodejs/5.mp4",
-      "https://example.com/videos/nodejs/6.mp4",
-      "https://example.com/videos/nodejs/7.mp4",
-      "https://example.com/videos/nodejs/8.mp4",
-      "https://example.com/videos/nodejs/9.mp4",
-      "https://example.com/videos/nodejs/10.mp4"
+    "videoLinks": [
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
+    
   },
   {
     "id": 3,
@@ -70,17 +131,47 @@
     "rating": 4.7,
     "courseLevel": "Beginner",
     "whatYouWillLearn": "Understand machine learning concepts, explore supervised and unsupervised learning, build predictive models, work with real-world datasets.",
-    "courseVideos": [
-      "https://example.com/videos/ml/1.mp4",
-      "https://example.com/videos/ml/2.mp4",
-      "https://example.com/videos/ml/3.mp4",
-      "https://example.com/videos/ml/4.mp4",
-      "https://example.com/videos/ml/5.mp4",
-      "https://example.com/videos/ml/6.mp4",
-      "https://example.com/videos/ml/7.mp4",
-      "https://example.com/videos/ml/8.mp4",
-      "https://example.com/videos/ml/9.mp4",
-      "https://example.com/videos/ml/10.mp4"
+    "videoLinks": [
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -98,17 +189,47 @@
     "rating": 4.9,
     "courseLevel": "Beginner to Advanced",
     "whatYouWillLearn": "Master both frontend and backend development, learn about databases and APIs, build and deploy full-stack applications, collaborate in a team environment.",
-    "courseVideos": [
-      "https://example.com/videos/fullstack/1.mp4",
-      "https://example.com/videos/fullstack/2.mp4",
-      "https://example.com/videos/fullstack/3.mp4",
-      "https://example.com/videos/fullstack/4.mp4",
-      "https://example.com/videos/fullstack/5.mp4",
-      "https://example.com/videos/fullstack/6.mp4",
-      "https://example.com/videos/fullstack/7.mp4",
-      "https://example.com/videos/fullstack/8.mp4",
-      "https://example.com/videos/fullstack/9.mp4",
-      "https://example.com/videos/fullstack/10.mp4"
+    "videoLinks": [
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -126,17 +247,47 @@
     "rating": 4.5,
     "courseLevel": "Intermediate",
     "whatYouWillLearn": "Build mobile apps for Android and iOS, learn Dart programming, integrate APIs, and create responsive UI/UX designs.",
-    "courseVideos": [
-      "https://example.com/videos/flutter/1.mp4",
-      "https://example.com/videos/flutter/2.mp4",
-      "https://example.com/videos/flutter/3.mp4",
-      "https://example.com/videos/flutter/4.mp4",
-      "https://example.com/videos/flutter/5.mp4",
-      "https://example.com/videos/flutter/6.mp4",
-      "https://example.com/videos/flutter/7.mp4",
-      "https://example.com/videos/flutter/8.mp4",
-      "https://example.com/videos/flutter/9.mp4",
-      "https://example.com/videos/flutter/10.mp4"
+    "videoLinks": [
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -161,16 +312,46 @@
       "webinarHosted": 7
     },
     "videoLinks": [
-      "https://example.com/video1",
-      "https://example.com/video2",
-      "https://example.com/video3",
-      "https://example.com/video4",
-      "https://example.com/video5",
-      "https://example.com/video6",
-      "https://example.com/video7",
-      "https://example.com/video8",
-      "https://example.com/video9",
-      "https://example.com/video10"
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -195,16 +376,46 @@
       "webinarHosted": 9
     },
     "videoLinks": [
-      "https://example.com/video1",
-      "https://example.com/video2",
-      "https://example.com/video3",
-      "https://example.com/video4",
-      "https://example.com/video5",
-      "https://example.com/video6",
-      "https://example.com/video7",
-      "https://example.com/video8",
-      "https://example.com/video9",
-      "https://example.com/video10"
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   },
   {
@@ -229,16 +440,46 @@
       "webinarHosted": 8
     },
     "videoLinks": [
-      "https://example.com/video1",
-      "https://example.com/video2",
-      "https://example.com/video3",
-      "https://example.com/video4",
-      "https://example.com/video5",
-      "https://example.com/video6",
-      "https://example.com/video7",
-      "https://example.com/video8",
-      "https://example.com/video9",
-      "https://example.com/video10"
+      {
+        "id": 1,
+        "title": "Introduction to React.js",
+        "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0"
+      },
+      {
+        "id": 2,
+        "title": "Learn Next.js in One Video",
+        "url": "https://www.youtube.com/watch?v=1WmNXEVia8I"
+      },
+      {
+        "id": 3,
+        "title": "Node.js Crash Course",
+        "url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+      },
+      {
+        "id": 4,
+        "title": "Express.js Tutorial for Beginners",
+        "url": "https://www.youtube.com/watch?v=SccSCuHhOw0"
+      },
+      {
+        "id": 5,
+        "title": "Tailwind CSS Full Course",
+        "url": "https://www.youtube.com/watch?v=dFgzHOX84xQ"
+      },
+      {
+        "id": 6,
+        "title": "MUI (Material UI) Tutorial",
+        "url": "https://www.youtube.com/watch?v=Xoz31I1FuiY"
+      },
+      {
+        "id": 7,
+        "title": "Firebase Authentication Tutorial",
+        "url": "https://www.youtube.com/watch?v=-OKrloDzGpU"
+      },
+      {
+        "id": 8,
+        "title": "JWT Authentication in Node.js",
+        "url": "https://www.youtube.com/watch?v=7Q17ubqLfaM"
+      }
     ]
   }
 ]
