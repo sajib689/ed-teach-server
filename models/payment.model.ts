@@ -11,9 +11,9 @@ export const paymentSchema = new Schema<IPayment>(
       name: { type: String, required: true },
       email: { type: String, required: true },
       phone: { type: String, required: true },
-    }, // Consolidated customer data
+    }, 
     total_amount: { type: Number, required: true },
-    status: { type: String, default: "PENDING" }, // Default to PENDING
+    status: { type: String, default: "PENDING" }, 
   },
   { timestamps: true }
 );
