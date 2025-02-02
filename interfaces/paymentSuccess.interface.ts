@@ -7,7 +7,7 @@ export interface IPayment {
     phone: string;
   };
   total_amount: number;
-  status: string; // Example: "PENDING", "SUCCESS", "FAILED"
+  status: string; 
   createdAt?: Date;
   updatedAt?: Date;
 }
