@@ -35,7 +35,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1/', router);
 app.use('/api/v1/', courseRouter);
 app.use('/api/v1/', paymentRouter);
-// MongoDB connection
+
+// MongoDB connection process
 const connectDB = async () => {
   try {
     const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.2m0rny5.mongodb.net/learnCode`;
