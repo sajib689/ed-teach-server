@@ -6,7 +6,6 @@ import router from './routes/users.route';
 import courseRouter from './routes/course.route';
 import { createServer } from "http";
 import { Server } from "socket.io";
-import SSLCommerzPayment from 'sslcommerz-lts';
 import { PaymentData } from './interfaces/payment.interface';
 import paymentRouter from './routes/payment.route';
 
@@ -59,6 +58,14 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
+  console.log("New client connected:", socket.id);
+
+  const deviceInfo = {
+    ip: socket.handshake.address,
+    userAgent: socket.handshake.headers["user-agent"],
+  };
+
+  socket.emit("deviceInfo", deviceInfo);
   activeUsers++;
   io.emit('activeUsers', activeUsers);
 
