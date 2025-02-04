@@ -68,6 +68,7 @@ io.on('connection', (socket) => {
     userAgent: socket.handshake.headers["user-agent"],
     os: os,
     device: device,
+    date: new Date().toLocaleString()
   };
   socket.emit("deviceInfo", deviceInfo);
   activeUsers++;
