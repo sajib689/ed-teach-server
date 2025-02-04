@@ -62,11 +62,12 @@ io.on('connection', (socket) => {
   const userAgentString = socket.handshake.headers["user-agent"];
   const agent = useragent.parse(userAgentString);
   const os = agent.os
-
+  const device = agent
   const deviceInfo = {
     ip: socket.handshake.address,
     userAgent: socket.handshake.headers["user-agent"],
     os: os,
+    device: device,
   };
   socket.emit("deviceInfo", deviceInfo);
   activeUsers++;
