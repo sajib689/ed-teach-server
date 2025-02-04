@@ -6,9 +6,9 @@ import router from './routes/users.route';
 import courseRouter from './routes/course.route';
 import { createServer } from "http";
 import { Server } from "socket.io";
-import SSLCommerzPayment from 'sslcommerz-lts';
 import { PaymentData } from './interfaces/payment.interface';
 import paymentRouter from './routes/payment.route';
+import useragent from 'useragent';
 
 // Load environment variables
 dotenv.config();
@@ -59,6 +59,17 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
+  const userAgentString = socket.handshake.headers["user-agent"];
+  const agent = useragent.parse(userAgentString);
+  const os = agent.os
+  const device = agent
+  const deviceInfo = {
+    ip: socket.handshake.address,
+    userAgent: socket.handshake.headers["user-agent"],
+    os: os,
+    device: device,
+  };
+  socket.emit("deviceInfo", deviceInfo);
   activeUsers++;
   io.emit('activeUsers', activeUsers);
 
