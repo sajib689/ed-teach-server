@@ -8,6 +8,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import { PaymentData } from './interfaces/payment.interface';
 import paymentRouter from './routes/payment.route';
+import useragent from 'useragent';
 
 // Load environment variables
 dotenv.config();
@@ -58,11 +59,15 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
+  const userAgentString = socket.handshake.headers["user-agent"];
+  const agent = useragent.parse(userAgentString);
+  const os = agent.os
+
   const deviceInfo = {
     ip: socket.handshake.address,
     userAgent: socket.handshake.headers["user-agent"],
+    os: os,
   };
-
   socket.emit("deviceInfo", deviceInfo);
   activeUsers++;
   io.emit('activeUsers', activeUsers);
