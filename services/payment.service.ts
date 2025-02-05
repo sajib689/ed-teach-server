@@ -51,7 +51,7 @@ export const updatePaymentStatus = async (
       });
     } else {
       payment.status = status;
-      payment.customer = customerData; // Update consolidated field
+      payment.customer = customerData; 
       payment.total_amount = total_amount;
       payment.courseName = courseName;
     }
