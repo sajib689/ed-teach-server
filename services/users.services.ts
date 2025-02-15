@@ -36,3 +36,17 @@ export const getUsersByEmailService = async (email: string): Promise<IUser | nul
     console.error("Error in getUsersByEmailService:", err);
     throw new Error("Failed to get user by email.");
   }}
+
+
+export const getAdmin = async (role: string): Promise<IUser | null>  => {
+  try {
+    if (!role) {
+      throw new Error("Email is required.");
+    }
+    const admin = await User.findOne({role: role});
+    return admin
+  } catch(err) {
+    console.error("Error in getAdmin:", err);
+    throw new Error("Failed to get admin.");
+  }
+}
