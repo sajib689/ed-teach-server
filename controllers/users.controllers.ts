@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createUsers, getAdmin } from "../services/users.services";
+import { createUsers, getAdmin, getUsers } from "../services/users.services";
 import { getUsersByEmailService } from "../services/users.services";
 import { User } from "../models/users.model";
 
@@ -58,6 +58,21 @@ export const getUsersByEmailController = async (
   } catch (err) {
     console.error("Error in getUsersByEmailService:", err);
     throw new Error("Failed to get user by email.");
+  }
+};
+
+export const getUsersController = async (req: Request, res: Response) => {
+  try {
+    const users = await getUsers();
+    
+    if (!users) {
+      return res.status(404).json({ message: "No users found" });
+    }
+
+    return res.status(200).json(users);
+  } catch (err) {
+    console.error("Error fetching users:", err);
+    return res.status(500).json({ message: "Internal server error" });
   }
 };
 
