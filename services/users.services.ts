@@ -38,15 +38,19 @@ export const getUsersByEmailService = async (email: string): Promise<IUser | nul
   }}
 
 
-export const getAdmin = async (role: string): Promise<IUser | null>  => {
-  try {
-    if (!role) {
-      throw new Error("Email is required.");
+  export const getAdmin = async (role: string): Promise<IUser | null> => {
+    try {
+      if (!role) {
+        throw new Error("Role is required.");
+      }
+  
+      // Case-insensitive search for role
+      const admin = await User.findOne({ role: { $regex: new RegExp("^" + role + "$", "i") } });
+  
+      return admin;
+    } catch (err) {
+      console.error("Error in getAdmin:", err);
+      throw new Error("Failed to get admin.");
     }
-    const admin = await User.findOne({role: role});
-    return admin
-  } catch(err) {
-    console.error("Error in getAdmin:", err);
-    throw new Error("Failed to get admin.");
-  }
-}
+  };
+  
