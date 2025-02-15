@@ -64,17 +64,27 @@ export const getUsersByEmailController = async (
 
 export const getAdminController = async (req: Request, res: Response) => {
   try {
-    const {role} = req.params
+    let role = req.query.role; // Extract from query params
+
     if (!role) {
-      return res.status(400).json({
-        message: "role is required.",
-      });
-      
+      return res.status(400).json({ message: "Role is required." });
     }
-    const admin = await getAdmin(role)
-      res.status(200).json({message: 'admin found', data: admin});
+
+    if (Array.isArray(role)) {
+      role = role[0]; // Take the first element if multiple values exist
+    }
+
+    console.log("Requested Role:", role);
+
+    const admin = await getAdmin(role as string); // Explicitly cast to string
+
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found.", data: null });
+    }
+
+    res.status(200).json({ message: "Admin found", data: admin });
   } catch (err) {
-    console.error("Error in getAdmin:", err);
-    throw new Error("Failed to get admin.");
+    console.error("Error in getAdminController:", err);
+    res.status(500).json({ message: "Failed to get admin." });
   }
-}
+};
