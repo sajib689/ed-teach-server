@@ -4,3 +4,4 @@
 [Get Single Course Data By Id Get API](http://localhost:5000/api/v1/getcourses/:id)
 [Get Single Users Data By Email Get API](http://localhost:5000/api/v1/users/:email)
 [Get Single Payment Data By Email Get API](http://localhost:5000/api/v1/paymenthistory/:email)
+[Get Single User Data By Admin Get API](http://localhost:5000/api/v1/users?role=admin)
