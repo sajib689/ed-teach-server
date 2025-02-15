@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createUsers } from "../services/users.services";
+import { createUsers, getAdmin } from "../services/users.services";
 import { getUsersByEmailService } from "../services/users.services";
 import { User } from "../models/users.model";
 
@@ -60,3 +60,21 @@ export const getUsersByEmailController = async (
     throw new Error("Failed to get user by email.");
   }
 };
+
+
+export const getAdminController = async (req: Request, res: Response) => {
+  try {
+    const {role} = req.params
+    if (!role) {
+      return res.status(400).json({
+        message: "role is required.",
+      });
+      
+    }
+    const admin = await getAdmin(role)
+      res.status(200).json({message: 'admin found', data: admin});
+  } catch (err) {
+    console.error("Error in getAdmin:", err);
+    throw new Error("Failed to get admin.");
+  }
+}
