@@ -45,7 +45,7 @@ export const getUsersByEmailController = async (
   res: Response
 ) => {
   try {
-    // Extract email from the request body
+    // Extract email from the request body----
     const {email} = req.params;
     // Validate required fields
     if (!email) {
